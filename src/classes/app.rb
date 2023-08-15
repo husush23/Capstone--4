@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-require_relative './label'
+require_relative 'label'
 require_relative 'book'
 
 # Class App
