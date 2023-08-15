@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Class: Main
 #
 # Represents a  class to to display a menu on a CL.
