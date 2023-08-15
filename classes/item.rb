@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'date'
 
 # Item class
@@ -21,7 +19,6 @@ class Item
     @archived = true if can_be_archived
   end
 end
-
 
 item = Item.new('2019-02-03')
 puts item.can_be_archived
