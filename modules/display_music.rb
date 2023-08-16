@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Module for displaying music functionality.
 module DisplayMusic
   def display_all_music_albums

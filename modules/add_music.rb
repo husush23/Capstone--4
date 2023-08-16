@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Module for adding music functionality.
 module AddMusic
   def add_music
