@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 require 'json'
 
+# Save data
 module PreserveData
-  BOOK_FILE_NAME = 'data/book.json'.freeze
-  LABEL_FILE_NAME = 'data/label.json'.freeze
+  BOOK_FILE_NAME = 'data/book.json'
+  LABEL_FILE_NAME = 'data/label.json'
 
   def save_to_file(file_name, data)
     File.write(file_name, JSON.pretty_generate(data))

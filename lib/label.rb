@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Class Label
 class Label
   attr_accessor :items, :color, :title, :id

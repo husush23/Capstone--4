@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Display books
 module DisplayBook
   def display_books
     if @books.empty?

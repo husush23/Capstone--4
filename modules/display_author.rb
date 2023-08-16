@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Display author
 module DisplayAuthor
   def display_all_authors
     @authors.each_with_index do |author, index|

@@ -1,8 +1,10 @@
-require 'json'
+# frozen_string_literal: true
 
+require 'json'
+# Load game
 module LoadGameAuthor
-  GAMES_FILE_NAME = 'data/games.json'.freeze
-  AUTHOR_FILE_NAME = 'data/author.json'.freeze
+  GAMES_FILE_NAME = 'data/games.json'
+  AUTHOR_FILE_NAME = 'data/author.json'
 
   def load_data_from_file(file_name)
     file = File.read(file_name)

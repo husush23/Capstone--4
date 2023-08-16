@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require_relative 'add_game'
 require_relative 'display_game'
@@ -5,10 +6,8 @@ require_relative 'display_author'
 require_relative 'preserve_game_author'
 require_relative 'load_game_author'
 
-
-
+# Modules
 module Modules
- 
   include AddGame
   include DisplayGame
   include DisplayAuthor

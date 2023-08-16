@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Add Game
 module AddGame
   def add_game
     publish_date = input_date

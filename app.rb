@@ -1,3 +1,6 @@
+# rubocop:disable Metrics/MethodLength
+# frozen_string_literal: true
+
 require_relative 'lib/movie'
 require_relative 'lib/source'
 require_relative 'lib/book'
@@ -8,6 +11,7 @@ require_relative 'lib/game'
 require_relative 'lib/author'
 require_relative 'modules/modules'
 
+# Application
 class App
   attr_accessor :movies, :books, :label
 
@@ -36,10 +40,6 @@ class App
     when 4
       display_all_games
     when 5
-      display_all_genres
-    when 6
-      display_labels
-    else
       puts 'Thank you for using this app!'
       save_and_exit
     end
@@ -53,12 +53,6 @@ class App
       display_all_sources
     when 9
       add_book
-    when 10
-      add_music
-    when 11
-      add_movie
-    when 12
-      add_game
     else
       puts 'Thank you for using this app!'
       save_and_exit
@@ -70,3 +64,4 @@ class App
     exit
   end
 end
+# rubocop:enable Metrics/MethodLength
