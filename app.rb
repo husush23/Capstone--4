@@ -1,9 +1,5 @@
-require_relative 'lib/movie'
-require_relative 'lib/source'
 require_relative 'lib/book'
 require_relative 'lib/label'
-require_relative 'lib/music_album'
-require_relative 'lib/genre'
 require_relative 'lib/game'
 require_relative 'lib/author'
 require_relative 'modules/modules'
@@ -37,8 +33,9 @@ class App
     when 4
       display_all_games
     when 5
-      puts 'Thank you for using this app!'
-      save_and_exit
+      display_genres
+    when 6
+      display_labels
     end
   end
 
