@@ -23,7 +23,6 @@ module Modules
   include PreserveData
   include PreserveGameAuthor
 
-
   def save_collections
     # save_movies
     # save_source
