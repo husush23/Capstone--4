@@ -8,7 +8,7 @@ module AddBook
     @books << book
     label = add_label(book)
     book.add_label(label)
-    puts 'Book album Added Successfully'
+    puts 'Book added Successfully'
     puts 'Press Enter to continue!'
     gets.chomp
   end

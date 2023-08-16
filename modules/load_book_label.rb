@@ -6,8 +6,12 @@ module LoadData
   LABEL_FILE_NAME = 'data/label.json'.freeze
 
   def load_data_from_file(file_name)
-    file = File.read(file_name)
-    JSON.parse(file)
+    if File.size(file_name).positive?
+      file = File.read(file_name)
+      JSON.parse(file)
+    else
+      []
+    end
   end
 
   def load_labels
