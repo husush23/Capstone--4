@@ -1,5 +1,4 @@
 # rubocop:disable Metrics/MethodLength
-# frozen_string_literal: true
 
 require_relative 'lib/movie'
 require_relative 'lib/source'

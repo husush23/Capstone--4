@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Add book
 module AddBook
   def add_book

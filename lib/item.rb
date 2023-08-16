@@ -1,5 +1,4 @@
 # rubocop:disable Style/OptionalBooleanParameter
-# frozen_string_literal: true
 
 require 'date'
 # Item class

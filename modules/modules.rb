@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'add_game'
 require_relative 'display_game'
 require_relative 'display_author'
