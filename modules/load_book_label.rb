@@ -2,8 +2,8 @@ require 'json'
 
 # Load data
 module LoadData
-  BOOK_FILE_NAME = 'data/book.json'
-  LABEL_FILE_NAME = 'data/label.json'
+  BOOK_FILE_NAME = 'data/book.json'.freeze
+  LABEL_FILE_NAME = 'data/label.json'.freeze
 
   def load_data_from_file(file_name)
     file = File.read(file_name)

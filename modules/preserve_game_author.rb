@@ -1,8 +1,8 @@
 require 'json'
 # Save game
 module PreserveGameAuthor
-  GAMES_FILE_NAME = 'data/games.json'
-  AUTHOR_FILE_NAME = 'data/author.json'
+  GAMES_FILE_NAME = 'data/games.json'.freeze
+  AUTHOR_FILE_NAME = 'data/author.json'.freeze
 
   def save_to_file(file_name, data)
     File.write(file_name, JSON.pretty_generate(data))

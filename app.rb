@@ -1,5 +1,3 @@
-# rubocop:disable Metrics/MethodLength
-
 require_relative 'lib/movie'
 require_relative 'lib/source'
 require_relative 'lib/book'
@@ -63,4 +61,3 @@ class App
     exit
   end
 end
-# rubocop:enable Metrics/MethodLength
