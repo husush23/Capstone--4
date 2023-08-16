@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'src/classes/app'
 @app = App.new
 @parameters = {}
