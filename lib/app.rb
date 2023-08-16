@@ -33,7 +33,10 @@ class GameManager
   end
 
   def save_data_to_json
-    File.open('games.json', 'w') do |file|
+    unless File.directory?('data')
+        Dir.mkdir('data')
+    end
+    File.open('data/games.json', 'w') do |file|
       game_data = @items.map do |item|
         {
           label: item.label,
@@ -48,7 +51,7 @@ class GameManager
       file.write(JSON.pretty_generate(game_data))
     end
 
-    File.open('authors.json', 'w') do |file|
+    File.open('data/authors.json', 'w') do |file|
       author_data = @authors.map do |author|
         {
           id: author.id,
