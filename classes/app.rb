@@ -16,6 +16,8 @@ class GameManager
     game.author = author
     author.add_item(game)
     @items << game
+
+    save_data_to_json
   end
 
   def list_all_authors

@@ -8,8 +8,7 @@ def main
     puts "1. Add Game"
     puts "2. List All Authors"
     puts "3. List All Games"
-    puts "4. Save Data to JSON"
-    puts "5. Exit"
+    puts "4. Exit"
     print "Select an option: "
     choice = gets.chomp.to_i
 
@@ -39,9 +38,6 @@ def main
     when 3
       manager.list_all_games
     when 4
-      manager.save_data_to_json
-      puts "Data saved to JSON files."
-    when 5
       break
     else
       puts "Invalid option. Please select a valid option."
