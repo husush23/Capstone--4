@@ -1,5 +1,6 @@
 require 'json'
 
+# Load data
 module LoadData
   BOOK_FILE_NAME = 'data/book.json'.freeze
   LABEL_FILE_NAME = 'data/label.json'.freeze
