@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Represents a genre of music albums.
 class Genre
   attr_reader :name, :id
