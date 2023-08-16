@@ -46,6 +46,6 @@ class Item
   end
 end
 
-item = Item.new('2019-02-03')
+item = Item.new(publish_date:'2009-02-03', archived: true)
 puts item.can_be_archived
 
