@@ -1,30 +1,39 @@
 require 'date'
 
-# Class Item
 class Item
-  attr_accessor :id, :genre, :author, :source, :label
+  attr_accessor :archived, :publish_date, :id, :genre, :can_be_archived, :label
 
-  def initialize(params)
-    @id = params[:id] || Random.rand(1...1000)
-    @publish_date = Date.parse(params[:publish_date])
-    @archived = params[:archived] || false
-    @genre = params[:genre]
-    @author = params[:author]
-    @source = params[:source]
-    @label = params[:label]
+  def initialize(publish_date, id = nil)
+    @id = id || Random.rand(1..1000)
+    @publish_date = publish_date
+  end
+
+  def add_genre(genre)
+    @genre = genre
+  end
+
+  def add_author(author)
+    @author = author
+    author.items << self unless author.items.include?(self)
+  end
+
+  def add_label(label)
+    @label = label
+    @label.add_item(self)
+  end
+
+  def add_source(source)
+    @source = source
+    source.items << self unless source.items.include?(self)
+  end
+
+  def can_be_archived?
+    current_year = Date.today.year
+    publish_year = Date.parse(@publish_date).year
+    current_year - publish_year > 10
   end
 
   def move_to_archive
-    return unless can_be_archived?
-
-    @archived = true
-  end
-
-  private
-
-  def can_be_archived?
-    current_date = Date.today
-    year = current_date.year - @published_date.year
-    year > 10
+    @archived = true if can_be_archived?
   end
 end
