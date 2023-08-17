@@ -1,4 +1,3 @@
-#  Display game
 module DisplayGame
   def display_all_games
     @games.each_with_index do |game, index|

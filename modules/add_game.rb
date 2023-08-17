@@ -1,4 +1,3 @@
-# Add Game
 module AddGame
   def add_game
     publish_date = input_date

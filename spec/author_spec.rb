@@ -22,14 +22,14 @@ describe Author do
       expect(author.id).to be <= 1000
     end
   end
-  describe '#add_item' do
+  describe '#add_items' do # Change this to #add_items
     it 'adds an item to the author\'s items' do
       author = Author.new('Bob', 'Brown')
       item = double('item')
 
       expect(item).to receive(:add_author).with(author)
 
-      author.add_item(item)
+      author.add_items(item) # Change this to add_items
 
       expect(author.items).to include(item)
     end
