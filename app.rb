@@ -9,7 +9,7 @@ require_relative 'modules/modules'
 class App
   attr_accessor :books, :label
 
-  include Modules
+  include Modules 
 
   def initialize
     @books = []
