@@ -1,4 +1,4 @@
-require_relative '../item'
+require_relative 'item'
 
 # Represents a music album item.
 class MusicAlbum < Item
