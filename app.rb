@@ -1,18 +1,17 @@
 require_relative 'lib/book'
 require_relative 'lib/label'
+require_relative 'lib/music_album'
+require_relative 'lib/genre'
 require_relative 'lib/game'
 require_relative 'lib/author'
 require_relative 'modules/modules'
-
 # Application
 class App
-  attr_accessor :movies, :books, :label
+  attr_accessor :books, :label
 
   include Modules
 
   def initialize
-    @movies = []
-    @sources = []
     @books = []
     @label = []
     @genres = []
@@ -22,31 +21,34 @@ class App
     load_collections
   end
 
-  def run_till6(option)
+  def run_till_to5(option)
     case option
     when 1
       display_books
     when 2
       display_all_music_albums
     when 3
-      display_all_movies
-    when 4
       display_all_games
+    when 4
+      display_all_genres
     when 5
-      display_genres
-    when 6
       display_labels
+    else
+      puts 'Thank you for using this app!'
+      save_and_exit
     end
   end
 
-  def run_more_than6(option)
+  def run_till_to9(option)
     case option
-    when 7
+    when 6
       display_all_authors
-    when 8
-      display_all_sources
-    when 9
+    when 7
       add_book
+    when 8
+      add_music
+    when 9
+      add_game
     else
       puts 'Thank you for using this app!'
       save_and_exit
