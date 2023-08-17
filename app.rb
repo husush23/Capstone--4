@@ -7,7 +7,7 @@ require_relative 'lib/author'
 require_relative 'modules/modules'
 
 class App
-  attr_accessor  :books, :label
+  attr_accessor :books, :label
 
   include Modules
 
@@ -21,7 +21,7 @@ class App
     load_collections
   end
 
-  def run_till_to_5(option)
+  def run_till_to5(option)
     case option
     when 1
       display_books
@@ -39,7 +39,7 @@ class App
     end
   end
 
-  def run_till_to_9(option)
+  def run_till_to9(option)
     case option
     when 6
       display_all_authors

@@ -12,9 +12,9 @@ class Main
       display_options
       option = take_input
       if option >= 1 && option < 6
-        @app.run_till_to_5(option)
+        @app.run_till_to5(option)
       else
-        @app.run_till_to_9(option)
+        @app.run_till_to9(option)
       end
       break if option == 10
     end
