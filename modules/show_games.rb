@@ -1,4 +1,4 @@
-module DisplayGame
+module ShowGames
   def display_all_games
     @games.each_with_index do |game, index|
       author_name = "#{game.author.first_name} #{game.author.last_name}"

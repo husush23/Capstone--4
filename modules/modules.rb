@@ -1,13 +1,13 @@
-require_relative 'add_music'
+require_relative 'include_music'
 require_relative 'display_music'
 require_relative 'display_genre'
 require_relative 'store_music_album'
-require_relative 'add_game'
-require_relative 'display_game'
+require_relative 'include_game'
+require_relative 'show_games'
 require_relative 'display_author'
 require_relative 'preserve_game_author'
 require_relative 'load_game_author'
-require_relative 'add_book'
+require_relative 'include_book'
 require_relative 'display_book'
 require_relative 'display_label'
 require_relative 'load_book_label'
@@ -24,7 +24,7 @@ module Modules
   include DisplayGenres
   include StoreMusicAlbum
   include AddGame
-  include DisplayGame
+  include ShowGames
   include DisplayAuthor
   include PreserveGameAuthor
   include LoadGameAuthor
