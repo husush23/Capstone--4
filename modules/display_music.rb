@@ -1,4 +1,3 @@
-# Module for displaying music functionality.
 module DisplayMusic
   def display_all_music_albums
     @music_albums.each_with_index do |music, index|

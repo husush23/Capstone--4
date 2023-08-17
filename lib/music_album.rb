@@ -1,6 +1,5 @@
 require_relative 'item'
 
-# Represents a music album item.
 class MusicAlbum < Item
   attr_reader :on_spotify, :publish_date
   attr_accessor :genre

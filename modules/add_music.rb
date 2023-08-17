@@ -1,4 +1,3 @@
-# Module for adding music functionality.
 module AddMusic
   def add_music
     publish_date = input_date
