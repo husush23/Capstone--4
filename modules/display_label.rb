@@ -1,3 +1,4 @@
+# Display label
 module DisplayLabel
   def display_labels
     if @label.empty?
