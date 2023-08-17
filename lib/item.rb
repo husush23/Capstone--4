@@ -1,9 +1,6 @@
-# rubocop:disable Style/OptionalBooleanParameter
-
 require 'date'
+
 # Item class
-require 'date'
-
 class Item
   attr_accessor :archived, :publish_date, :id, :genre, :can_be_archived, :label
 
@@ -36,4 +33,3 @@ class Item
     @archived = true if can_be_archived?
   end
 end
-# rubocop:enable Style/OptionalBooleanParameter
