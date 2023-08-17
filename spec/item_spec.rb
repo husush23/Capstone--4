@@ -26,7 +26,20 @@ describe Item do
           expect(item.genre).to eq('Fantasy')
         end
       end
-      
+
+      describe '#add_author' do
+        it 'adds the item to the author\'s items' do
+          author = Author.new('John', 'Doe')
+          item = Item.new('2023-08-17')
+    
+          expect(author.items).to_not include(item)
+    
+          item.add_author(author)
+    
+          expect(author.items).to include(item)
+        end
+      end
+
     describe "Can be archive?" do
         item = Item.new("2021-01-05")
         it "Should return false" do
