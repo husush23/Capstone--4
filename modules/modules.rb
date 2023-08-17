@@ -13,7 +13,6 @@ require_relative 'display_label'
 require_relative 'load_book_label'
 require_relative 'preserve_data'
 
-
 module Modules
   include AddBook
   include DisplayBook
