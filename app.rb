@@ -5,7 +5,7 @@ require_relative 'lib/genre'
 require_relative 'lib/game'
 require_relative 'lib/author'
 require_relative 'modules/modules'
-# Application
+
 class App
   attr_accessor :books, :label
 

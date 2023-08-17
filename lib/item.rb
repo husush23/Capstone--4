@@ -1,6 +1,5 @@
 require 'date'
 
-# Item class
 class Item
   attr_accessor :archived, :publish_date, :id, :genre, :can_be_archived, :label
 
@@ -21,6 +20,11 @@ class Item
   def add_label(label)
     @label = label
     @label.add_item(self)
+  end
+
+  def add_source(source)
+    @source = source
+    source.items << self unless source.items.include?(self)
   end
 
   def can_be_archived?
