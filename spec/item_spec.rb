@@ -19,6 +19,14 @@ describe Item do
           expect(item.id).to eq(500)
         end
       end
+      describe '#add_genre' do
+        it 'sets the genre attribute' do
+          item = Item.new('2023-08-17')
+          item.add_genre('Fantasy')
+          expect(item.genre).to eq('Fantasy')
+        end
+      end
+      
     describe "Can be archive?" do
         item = Item.new("2021-01-05")
         it "Should return false" do
