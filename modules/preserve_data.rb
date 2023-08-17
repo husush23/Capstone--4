@@ -1,6 +1,5 @@
 require 'json'
 
-# Save data
 module PreserveData
   BOOK_FILE_NAME = 'data/book.json'.freeze
   LABEL_FILE_NAME = 'data/label.json'.freeze

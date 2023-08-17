@@ -1,16 +1,12 @@
 require 'json'
-# Load game
+
 module LoadGameAuthor
   GAMES_FILE_NAME = 'data/games.json'.freeze
   AUTHOR_FILE_NAME = 'data/author.json'.freeze
 
   def load_data_from_file(file_name)
-    if File.size(file_name).positive?
-      file = File.read(file_name)
-      JSON.parse(file)
-    else
-      []
-    end
+    file = File.read(file_name)
+    JSON.parse(file)
   end
 
   def load_authors

@@ -1,4 +1,3 @@
-# Add book
 module AddBook
   def add_book
     publish_date = input_date
@@ -8,13 +7,11 @@ module AddBook
     @books << book
     label = add_label(book)
     book.add_label(label)
-    puts 'Book added Successfully'
-    puts 'Press Enter to continue!'
-    gets.chomp
+    puts 'Book album Added Successfully'
   end
 
   def input_date
-    puts 'Please Enter publish date in following format: yyyy/mm/dd'
+    puts 'Please Enter publish date in   yyyy/mm/dd format'
     gets.chomp
   end
 

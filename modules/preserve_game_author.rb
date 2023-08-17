@@ -1,5 +1,5 @@
 require 'json'
-# Save game
+
 module PreserveGameAuthor
   GAMES_FILE_NAME = 'data/games.json'.freeze
   AUTHOR_FILE_NAME = 'data/author.json'.freeze
