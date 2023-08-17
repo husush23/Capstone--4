@@ -11,9 +11,11 @@ require_relative 'add_book'
 require_relative 'display_book'
 require_relative 'display_label'
 require_relative 'load_book_label'
-require_relative 'preserve_data'
+require_relative 'preserve_data' 
+
 
 module Modules
+
   include AddBook
   include DisplayBook
   include DisplayLabel
