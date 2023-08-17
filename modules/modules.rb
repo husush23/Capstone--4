@@ -1,7 +1,7 @@
 require_relative 'add_music'
 require_relative 'display_music'
 require_relative 'display_genre'
-require_relative 'storage'
+require_relative 'store_music_album'
 require_relative 'add_game'
 require_relative 'display_game'
 require_relative 'display_author'
@@ -23,7 +23,7 @@ module Modules
   include AddMusic
   include DisplayMusic
   include DisplayGenres
-  include Storage
+  include StoreMusicAlbum
   include AddGame
   include DisplayGame
   include DisplayAuthor
