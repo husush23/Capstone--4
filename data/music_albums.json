@@ -16,5 +16,11 @@
     "publish_date": "2030",
     "on_spotify": true,
     "genre": "ww"
+  },
+  {
+    "id": 993,
+    "publish_date": "2030",
+    "on_spotify": true,
+    "genre": "tests"
   }
 ]
