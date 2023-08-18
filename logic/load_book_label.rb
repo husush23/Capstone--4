@@ -1,19 +1,15 @@
 require 'json'
 
 module LoadData
-  BOOK_FILE_NAME = 'data/book.json'.freeze
-  LABEL_FILE_NAME = 'data/label.json'.freeze
-
-  def load_data_from_file(file_name)
-    file = File.read(file_name)
-    JSON.parse(file)
-  end
+  BOOK_FILE = 'data/book.json'.freeze
+  LABEL_FILE = 'data/label.json'.freeze
 
   def load_labels
     label_hash = []
-    return label_hash unless File.exist?(LABEL_FILE_NAME)
+    return label_hash unless File.exist?(LABEL_FILE)
 
-    label_hash = load_data_from_file(LABEL_FILE_NAME)
+    file = File.read(LABEL_FILE)
+    label_hash = JSON.parse(file)
 
     label_hash.each do |label|
       label_obj = Label.new(label['color'], label['title'])
@@ -24,9 +20,10 @@ module LoadData
 
   def load_books
     book_hash = []
-    return book_hash unless File.exist?(BOOK_FILE_NAME)
+    return book_hash unless File.exist?(BOOK_FILE)
 
-    book_hash = load_data_from_file(BOOK_FILE_NAME)
+    file = File.read(BOOK_FILE)
+    book_hash = JSON.parse(file)
     book_hash.each do |book|
       book_obj = Book.new(book['cover_state'], book['publisher'], book['publish_date'], book['id'])
       label_obj = @label.find { |label| label.title == book['label'] }

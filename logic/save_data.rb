@@ -1,12 +1,9 @@
 require 'json'
 
-module PreserveData
-  BOOK_FILE_NAME = 'data/book.json'.freeze
-  LABEL_FILE_NAME = 'data/label.json'.freeze
+module SaveData
+  BOOK_FILE = 'data/book.json'.freeze
+  LABEL_FILE = 'data/label.json'.freeze
 
-  def save_to_file(file_name, data)
-    File.write(file_name, JSON.pretty_generate(data))
-  end
 
   def save_book
     books_hash = @books.map do |book|
@@ -18,7 +15,7 @@ module PreserveData
         label: book.label.title
       }
     end
-    save_to_file(BOOK_FILE_NAME, books_hash)
+    File.write(BOOK_FILE, JSON.pretty_generate(books_hash))
   end
 
   def save_label
@@ -29,6 +26,6 @@ module PreserveData
         title: label.title
       }
     end
-    save_to_file(LABEL_FILE_NAME, label_hash)
+    File.write(LABEL_FILE, JSON.pretty_generate(label_hash))
   end
 end

@@ -4,7 +4,7 @@ module ShowLabel
       puts 'No labels available.'
     else
       @label.each_with_index do |label, index|
-        puts "#{index}. Label Title: #{label.title}, Label Color: #{label.color}"
+        puts "#{index + 1}. Label Title: #{label.title}, Label Color: #{label.color}"
       end
     end
   end

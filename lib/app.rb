@@ -4,7 +4,7 @@ require_relative 'music_album'
 require_relative 'genre'
 require_relative 'game'
 require_relative 'author'
-require_relative '../modules/modules'
+require_relative '../logic/combined'
 
 class App
   attr_accessor :books, :label, :games, :authors, :genres, :music_albums

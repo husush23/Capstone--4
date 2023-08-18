@@ -10,6 +10,7 @@ require_relative 'load_game_author'
 require_relative 'include_book'
 require_relative 'show_book'
 require_relative 'show_label'
+require_relative 'fetch_music_album'
 require_relative 'load_book_label'
 require_relative 'save_data'
 
@@ -17,7 +18,7 @@ module Modules
   include AddBook
   include ShowBook
   include ShowLabel
-  include PreserveData
+  include SaveData
   include LoadData
   include AddMusic
   include ShowMusic
@@ -26,8 +27,9 @@ module Modules
   include AddGame
   include ShowGames
   include ShowAuthor
-  include PreserveGameAuthor
+  include SaveGameAuthor
   include LoadGameAuthor
+  include FetchMusicGenre
 
   def save_tasks
     save_book

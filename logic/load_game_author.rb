@@ -1,19 +1,15 @@
 require 'json'
 
 module LoadGameAuthor
-  GAMES_FILE_NAME = 'data/games.json'.freeze
-  AUTHOR_FILE_NAME = 'data/author.json'.freeze
-
-  def load_data_from_file(file_name)
-    file = File.read(file_name)
-    JSON.parse(file)
-  end
+  GAME_FILE = 'data/games.json'.freeze
+  AUTHOR_FILE = 'data/author.json'.freeze
 
   def load_authors
     author_hash = []
-    return author_hash unless File.exist?(AUTHOR_FILE_NAME)
+    return author_hash unless File.exist?(AUTHOR_FILE)
 
-    author_hash = load_data_from_file(AUTHOR_FILE_NAME)
+    file = File.read(AUTHOR_FILE)
+    author_hash = JSON.parse(file)
 
     author_hash.each do |author|
       author_obj = Author.new(author['first_name'], author['last_name'])
@@ -24,9 +20,11 @@ module LoadGameAuthor
 
   def load_games
     game_hash = []
-    return game_hash unless File.exist?(GAMES_FILE_NAME)
+    return game_hash unless File.exist?(GAME_FILE)
 
-    game_hash = load_data_from_file(GAMES_FILE_NAME)
+    file = File.read(GAME_FILE)
+    game_hash = JSON.parse(file)
+
     game_hash.each do |game|
       game_obj = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
       game_obj.id = game['id']

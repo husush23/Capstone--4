@@ -1,12 +1,9 @@
 require 'json'
 
-module PreserveGameAuthor
-  GAMES_FILE_NAME = 'data/games.json'.freeze
-  AUTHOR_FILE_NAME = 'data/author.json'.freeze
+module SaveGameAuthor
+  GAME_FILE = 'data/games.json'.freeze
+  AUTHOR_FILE = 'data/author.json'.freeze
 
-  def save_to_file(file_name, data)
-    File.write(file_name, JSON.pretty_generate(data))
-  end
 
   def save_games
     game_hash = @games.map do |game|
@@ -19,7 +16,7 @@ module PreserveGameAuthor
 
       }
     end
-    save_to_file(GAMES_FILE_NAME, game_hash)
+    File.write(GAME_FILE, JSON.pretty_generate(game_hash))
   end
 
   def save_author
@@ -30,6 +27,6 @@ module PreserveGameAuthor
         last_name: author.last_name
       }
     end
-    save_to_file(AUTHOR_FILE_NAME, author_hash)
+    File.write(AUTHOR_FILE, JSON.pretty_generate(author_hash))
   end
 end
