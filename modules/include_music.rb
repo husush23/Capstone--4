@@ -14,7 +14,6 @@ module AddMusic
     gets.chomp
   end
 
-
   def return_genre(input)
     @genres.each_with_index do |genre, _index|
       return genre if genre.name == input
