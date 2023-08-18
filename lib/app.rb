@@ -24,15 +24,15 @@ class App
   def run_one(number)
     case number
     when 1
-      display_books
+      show_books
     when 2
-      display_all_music_albums
+      show_all_music_albums
     when 3
-      display_all_games
+      show_all_games
     when 4
-      display_all_genres
+      show_all_genres
     when 5
-      display_labels
+      show_labels
     else
       puts 'Thank you!'
       save_and_exit
@@ -42,7 +42,7 @@ class App
   def run_two(number)
     case number
     when 6
-      display_all_authors
+      show_all_authors
     when 7
       add_game
     when 8

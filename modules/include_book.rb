@@ -3,15 +3,15 @@ module AddBook
     publish_date = input_date
     publisher = input_publisher
     cover_state = input_cover_state
-    book = Book.new(cover_state, publisher, publish_date)
-    @books << book
-    label = add_label(book)
-    book.add_label(label)
-    puts 'Book album Added Successfully'
+    new_book = Book.new(cover_state, publisher, publish_date)
+    @books << new_book
+    assigned_label = add_label(new_book)
+    new_book.add_label(assigned_label)
+    puts 'Book Album Added Successfully'
   end
 
   def input_date
-    puts 'Please Enter publish date in   yyyy/mm/dd format'
+    puts 'Please Enter publish date in yyyy/mm/dd format'
     gets.chomp
   end
 

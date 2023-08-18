@@ -6,7 +6,7 @@ module AddMusic
     @music_albums << music_album
     genre = add_genre
     music_album.add_genre(genre)
-    puts 'Music album Added Successfully'
+    puts 'Music  Successfully added '
   end
 
   def input_date
@@ -14,12 +14,6 @@ module AddMusic
     gets.chomp
   end
 
-  def add_genre
-    puts 'Add a genre'
-    puts 'Enter Genre Name'
-    input = gets.chomp
-    return_genre(input)
-  end
 
   def return_genre(input)
     @genres.each_with_index do |genre, _index|
@@ -28,6 +22,13 @@ module AddMusic
     new_genre = Genre.new(name: input)
     @genres << new_genre
     new_genre
+  end
+
+  def add_genre
+    puts 'Add a genre'
+    puts 'Enter Genre Name'
+    input = gets.chomp
+    return_genre(input)
   end
 
   def input_on_spotify

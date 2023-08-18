@@ -12,29 +12,29 @@ module AddGame
   end
 
   def input_date
-    puts 'Please Enter publish date in following format: yyyy/mm/dd'
+    puts 'Please Enter publish date in the following format: yyyy/mm/dd'
     gets.chomp
   end
 
   def input_multiplayer
-    puts 'Is the game multiplayer? Press 1 for true, 2 for false'
+    puts 'Is the game multiplayer? Press 1 for yes, 2 for no'
     multiplayer = gets.chomp.to_i
     while multiplayer.nil? || multiplayer < 1 || multiplayer > 2
-      puts 'input number between 1 and 2'
+      puts 'Please input a number between 1 and 2'
       multiplayer = gets.chomp.to_i
     end
     multiplayer == 1
   end
 
   def input_last_played_at
-    puts 'Please Enter last played date in following format: yyyy/mm/dd'
+    puts 'Please Enter last played date in the following format: yyyy/mm/dd'
     gets.chomp
   end
 
   def add_author
-    puts 'Author\'s First name: '
+    puts 'Author\'s First Name: '
     first_name = gets.chomp
-    puts 'Author\'s Last name: '
+    puts 'Author\'s Last Name: '
     last_name = gets.chomp
     Author.new(first_name, last_name)
   end
