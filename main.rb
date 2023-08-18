@@ -1,4 +1,4 @@
-require_relative './lib/app'
+require_relative 'lib/app'
 
 class Main
   def initialize
@@ -25,9 +25,9 @@ class Main
     puts '1. - List all books in the record'
     puts '2. - List all music albums saved'
     puts '3. - List all games in the record'
-    puts "4. - List all genres "
-    puts "5. - List all labels "
-    puts "6. - List all authors "
+    puts '4. - List all genres '
+    puts '5. - List all labels '
+    puts '6. - List all authors '
     puts '7. - Add a game'
     puts '8. - Add a music album'
     puts '9. - Add a book'
