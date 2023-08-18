@@ -10,11 +10,11 @@ class Main
     puts 'Catalogue of your things!'
     loop do
       display_selections
-      option = indentify_numbers
-      if option >= 1 && option < 6
-        @app.run_one(option)
+      number = indentify_numbers
+      if number >= 1 && number < 6
+        @app.run_one(number)
       else
-        @app.run_two(option)
+        @app.run_two(number)
       end
       break if option == 10
     end
