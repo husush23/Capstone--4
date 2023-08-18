@@ -1,13 +1,13 @@
-require_relative 'lib/book'
-require_relative 'lib/label'
-require_relative 'lib/music_album'
-require_relative 'lib/genre'
-require_relative 'lib/game'
-require_relative 'lib/author'
-require_relative 'modules/modules'
+require_relative 'book'
+require_relative 'label'
+require_relative 'music_album'
+require_relative 'genre'
+require_relative 'game'
+require_relative 'author'
+require_relative '../modules/modules'
 
 class App
-  attr_accessor :books, :label
+  attr_accessor :books, :label, :games, :authors, :genres, :music_albums
 
   include Modules
 
@@ -18,11 +18,11 @@ class App
     @music_albums = []
     @games = []
     @authors = []
-    load_collections
+    load_tasks
   end
 
-  def run_till_to5(option)
-    case option
+  def run_one(number)
+    case number
     when 1
       display_books
     when 2
@@ -34,29 +34,29 @@ class App
     when 5
       display_labels
     else
-      puts 'Thank you for using this app!'
+      puts 'Thank you!'
       save_and_exit
     end
   end
 
-  def run_till_to9(option)
-    case option
+  def run_two(number)
+    case number
     when 6
       display_all_authors
     when 7
-      add_book
+      add_game
     when 8
       add_music
     when 9
-      add_game
+      add_book
     else
-      puts 'Thank you for using this app!'
+      puts 'Thank you'
       save_and_exit
     end
   end
 
   def save_and_exit
-    save_collections
+    save_tasks
     exit
   end
 end

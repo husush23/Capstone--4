@@ -5,13 +5,13 @@ require_relative 'store_music_album'
 require_relative 'include_game'
 require_relative 'show_games'
 require_relative 'display_author'
-require_relative 'preserve_game_author'
+require_relative 'save_game_author'
 require_relative 'load_game_author'
 require_relative 'include_book'
 require_relative 'display_book'
 require_relative 'display_label'
 require_relative 'load_book_label'
-require_relative 'preserve_data'
+require_relative 'save_data'
 
 module Modules
   include AddBook
@@ -29,7 +29,7 @@ module Modules
   include PreserveGameAuthor
   include LoadGameAuthor
 
-  def save_collections
+  def save_tasks
     save_book
     save_label
     save_music
@@ -37,7 +37,7 @@ module Modules
     save_author
   end
 
-  def load_collections
+  def load_tasks
     load_labels
     load_books
     load_genres
